@@ -1,0 +1,54 @@
+<%- include('layout.ejs'); %>
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <h3>My name is <%= user.name %>
+            </h3> &nbsp;
+
+
+        </div>
+        <div class="row justify-content-center">
+
+            <h3>I am the King of <%= user.location %>
+            </h3> <br>
+
+        </div>
+
+
+    </div>
+    <div>
+
+        <form action="/logout" method="POST">
+            <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Logout</button>
+        </form>
+
+
+    </div>
+
+
+    <div>
+        <p>Lead variable user:</p>
+        <p>
+            <%= user %>
+        </p>
+        <p>
+            <%= user._id %>
+        </p>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <%- include('dashboardFriendTracker.ejs'); %>
+            </div>
+            <div class="col-sm">
+                <%- include('dashboardEvents.ejs'); %>
+            </div>
+        </div>
+
+    </div>
+
+    </body>
+
+    </html>

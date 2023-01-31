@@ -1,0 +1,161 @@
+/*
+.outline3 {
+    border: 1px solid blue;
+}
+
+.outline2 {
+    border: 2px dotted orange;
+}
+*/
+
+.eventMainContainer {
+    display: grid;
+
+}
+
+
+.eventBorderLine {
+    height: 1px;
+    background: gray;
+    grid-column: 1 / -1;
+
+}
+
+.addToCal {
+    text-align: center;
+}
+
+.outline-ind{
+    border: 1px black solid;
+}
+
+.oddRow{
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.attendingBox {
+    border-width: 1px 0px;
+    border-color: gray;
+    border-style: solid;
+    margin-bottom: 20px;
+}
+
+
+.atttendingItem{
+    width:100%;
+    height: 100%;
+}
+.attendingNum{
+    font-size: larger;
+    color: green;
+    font-weight: bold;
+}
+.attendingtext{
+    font-size: medium;
+    
+}
+
+ 
+.eventDesc{
+    white-space: pre-wrap;
+}
+
+
+.miniFooterBtn{
+    float: right;
+}
+
+#butWhy{
+    display: none;
+    overflow-y: scroll;
+    height:350px;
+}
+
+#butWhyBtn{
+    display: none;
+}
+
+
+@media (min-width: 769px) {
+    .eventMainContainer {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1px auto 1px 350px;
+        row-gap: 10px;
+
+    }
+
+    .eventNumAttending {}
+
+    .eventAttForm {}
+
+    .eventDTL {
+    }
+
+    .eventDetails {
+        overflow: hidden;
+        height:100%;
+    }
+
+
+    .eventAttFormContent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+
+    }
+
+    .eventAttFormContentItem {
+        margin: 0 15px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .eventMainContainer {}
+
+    .eventNumAttending {
+        text-align: center;
+        font-size: large;
+    }
+
+    .eventBorderLine1 {
+        order: 2;
+
+    }
+
+    .eventBorderLine2 {
+        order: 5;
+    }
+
+    .eventNumAttending {
+        order: 3;
+    }
+
+    .eventAttForm {
+        order: 4;
+    }
+
+    .eventDTL {
+        order: 1;
+        margin-top: 10px;
+    }
+
+    .eventDetails {
+        order: 6;
+    }
+
+    .eventAttFormContentItem {
+        margin: 10px 10px;
+        height: 40px;
+    }
+
+    .eventBorderLine {
+        margin: 15px 0px;
+
+    }
+
+}

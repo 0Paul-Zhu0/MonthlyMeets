@@ -1,0 +1,58 @@
+
+
+
+
+.landingEvents{
+    text-align: center;
+    margin-top: 100px;
+}
+
+@media (max-width: 768px){
+   
+}
+
+@media (min-width: 769px){
+    .landingEvents{
+        width: 600px;
+    }
+}
+
+#landingQuestion{
+    display: none;
+    margin-top: 50px;
+}
+
+#landingEventsList{
+    display:none;
+    margin-top: 50px;
+}
+
+#upcomingEventsBtn{
+    margin-top: 50px;
+}
+
+.invitedResponse{
+    font-size: larger;
+    margin: 3px 0px;
+}
+
+@media (max-width: 768px){
+    .invitedResponse{
+        width: 200px;
+    }
+    
+}
+
+
+.landingAnswer{
+    margin-top: 50px;
+}
+
+#landingAnswerA{
+    display:none;  
+}
+#landingAnswerB{
+    display:none;  
+}#landingAnswerC{
+    display:none;  
+}

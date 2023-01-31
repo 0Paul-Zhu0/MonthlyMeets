@@ -1,0 +1,13 @@
+@import "landingPage.css";
+@import "eventPage.css";
+
+body {background-color: #f1e25e;}
+
+.navbar {background-color:#f1e25e  !important;}
+
+/*
+.outline {
+    border: 1px black solid;
+}
+*/
+
