@@ -38,7 +38,7 @@ const newAttendance = (req,res) =>{
 
 //download calendar
 const downloadCalendar = (req,res) => {
-    res.download("public/assets/home.png", function(err){
+    res.download("public/assets/FebEventCal.ics", function(err){
         if(err){
             console.log(err);
         }
