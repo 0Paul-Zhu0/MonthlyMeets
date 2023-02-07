@@ -71,7 +71,8 @@
                             <h5>Date and Time</h5>
                             <p>
                                 <%= eventDetails[0].date.toLocaleString('en-us',{weekday:'long'});%>,
-                                   25 February 2023
+                                <%=eventDetails[0].date.toLocaleString('en-us',{day:'numeric'});%>
+                                <%=eventDetails[0].date.toLocaleString('en-us',{month:'long',year:'numeric'});%>
                                             <br>
                                             <%=
                                                 eventDetails[0].date.toLocaleString('en-us',{hour:'2-digit',minute:'2-digit'});%>
