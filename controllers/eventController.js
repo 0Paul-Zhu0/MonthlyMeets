@@ -1,6 +1,7 @@
 const UserEvent = require("../models/UserEvent");
 const Attendance = require("../models/Attendance");
 const ics = require('ics');
+const math = require("mathjs");
 
 //Load event
 const loadEvent = async (req, res) => {
@@ -57,12 +58,23 @@ const downloadCalendarNew = async (req, res) => {
   const year = Number(userEvent.date.toLocaleString('en-us',{year:'numeric'}));
   const hour = Number(userEvent.date.toLocaleString('en-us',{hour:'numeric' , hour12:false}));
   const minute = Number(userEvent.date.toLocaleString('en-us',{minute:'numeric'}));
+
+  const duration = Number(userEvent.duration);
+
+  const durationHour = math.floor(duration);
+
+  if (duration-durationHour == 0){
+    var durationMin = 0;
+  } else {
+    var durationMin = 30;
+  }
+
   
   const eventLocation = userEvent.locationName + "," + userEvent.locationAddress +"," +userEvent.locationPostcode
 
   const calEvent = {
     start: [year,month,day,hour,minute],
-    duration: { hours: 3, minutes: 30 },
+    duration: { hours: durationHour, minutes: durationMin },
     title: userEvent.title,
     description: userEvent.description,
     location: eventLocation,

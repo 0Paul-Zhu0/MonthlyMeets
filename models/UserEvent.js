@@ -17,6 +17,12 @@ const UserEventSchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
+
+    duration: {
+        type: String,
+        required: true,
+    },
+
     locationName: {
         type: String,
         required: true,

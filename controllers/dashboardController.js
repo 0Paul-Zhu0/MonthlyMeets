@@ -88,13 +88,14 @@ const deleteFriend = (req, res) => {
 //For making a new event in DB
 const newEvent = (req, res) => {
   const ownerId = req.user._id;
-  const { title, description, date, locationName, locationAddress, locationPostcode, eventLive } = req.body;
+  const { title, description, date, duration, locationName, locationAddress, locationPostcode, eventLive } = req.body;
 
   const newUserEvent = new UserEvent({
     ownerId,
     title,
     description,
     date,
+    duration,
     locationName, 
     locationAddress, 
     locationPostcode, 
