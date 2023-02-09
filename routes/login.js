@@ -2,7 +2,7 @@
 const express = require('express');
 const {registerView, loginView, registerUser,loginUser, landingView} = require('../controllers/loginController');
 const { dashboardView, newFriend, addHour, minusHour, deleteFriend, newEvent, logOut } = require("../controllers/dashboardController");
-const { loadEvent, newAttendance, downloadCalendar} = require('../controllers/eventController');
+const { loadEvent, newAttendance, downloadCalendar, downloadCalendarNew} = require('../controllers/eventController');
 const { protectRoute } = require("../auth/protect");
 
 
@@ -47,6 +47,10 @@ router.post('/newAttendance',newAttendance);
 
 //DOWNLOAD CALENDAR
 router.get('/download',downloadCalendar)
+
+//DOWNLOAD CALENDAR NEW
+router.get('/event/:id/calendar',downloadCalendarNew)
+
 
 //Log Out
 router.post('/logout', logOut);

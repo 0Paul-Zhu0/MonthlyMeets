@@ -115,6 +115,14 @@
                             <a href="https://drive.google.com/uc?export=download&id=1LPWuPKKGxhbVGrs-ZQr01JCv3r18QQaK" download>Add to calendar</a>
                         </div>
                     </div>
+
+                     <div class="row">
+                        <div class="col addToCal">
+                            <form action="/event/<%= eventDetails[0]._id %>/calendar" method="get">
+                                <button type="submit" class="btn btn-link">Add to calendar with a file</button>
+                            </form>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
