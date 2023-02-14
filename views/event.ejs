@@ -1,4 +1,5 @@
 <%- include('layout.ejs'); %>
+
     <div class="container outline">
         <div class="container outline">
             <h1>
@@ -10,10 +11,8 @@
     </div>
 
 
-
-
     <div class="container eventMainContainer outline2">
-        
+
         <div class="eventBorderLine eventBorderLine1"></div>
 
         <div class="eventNumAttending outline3">
@@ -34,27 +33,27 @@
                     <input type="hidden" name="eventId" id="eventId" value="<%= eventDetails[0]._id %>">
 
                     <div class="eventAttFormContent">
-                        
 
-                            <div class="eventAttFormContentItem">
-                                <input type="text" name="name" id="formName" placeholder="Name" class="atttendingItem">
-                            </div>
 
-                            <div class="eventAttFormContentItem">
-                                <select name="status" id="formStatus" class="atttendingItem">
-                                    <option value="" disabled selected>Can you make it?</option>
-                                    <option value="Yes">I can make it! 😃</option>
-                                    <option value="No">Can't make it! 😭</option>
-                                </select>
-                            </div>
-                            <div class="eventAttFormContentItem">
-                                <button type="submit" class="btn btn-success atttendingItem">Let me know!</button>
-                            </div>
-                        
+                        <div class="eventAttFormContentItem">
+                            <input type="text" name="name" id="formName" placeholder="Name" class="atttendingItem">
+                        </div>
+
+                        <div class="eventAttFormContentItem">
+                            <select name="status" id="formStatus" class="atttendingItem">
+                                <option value="" disabled selected>Can you make it?</option>
+                                <option value="Yes">I can make it! 😃</option>
+                                <option value="No">Can't make it! 😭</option>
+                            </select>
+                        </div>
+                        <div class="eventAttFormContentItem">
+                            <button type="submit" class="btn btn-success atttendingItem">Let me know!</button>
+                        </div>
+
                     </div>
                 </form>
             </div>
-        
+
         </div>
 
         <div class=" eventBorderLine eventBorderLine2"></div>
@@ -71,8 +70,8 @@
                             <h5>Date and Time</h5>
                             <p>
                                 <%= eventDetails[0].date.toLocaleString('en-us',{weekday:'long'});%>,
-                                <%=eventDetails[0].date.toLocaleString('en-us',{day:'numeric'});%>
-                                <%=eventDetails[0].date.toLocaleString('en-us',{month:'long',year:'numeric'});%>
+                                    <%=eventDetails[0].date.toLocaleString('en-us',{day:'numeric'});%>
+                                        <%=eventDetails[0].date.toLocaleString('en-us',{month:'long',year:'numeric'});%>
                                             <br>
                                             <%=
                                                 eventDetails[0].date.toLocaleString('en-us',{hour:'2-digit',minute:'2-digit'});%>
@@ -101,64 +100,60 @@
                 </div>
 
                 <div class="container outline">
-                    <!--
                     <div class="row">
-                        <div class="col addToCal">
-                            <form action="/download" method="get">
-                                <button type="submit" class="btn btn-link">Add to calendar</button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col addToCal">
-                            <a href="https://drive.google.com/uc?export=download&id=1LPWuPKKGxhbVGrs-ZQr01JCv3r18QQaK" download>Add to calendar</a>
-                        </div>
-                    </div>
--->
-                     <div class="row">
                         <div class="col addToCal">
                             <form action="/event/<%= eventDetails[0]._id %>/calendar" method="get">
                                 <button type="submit" class="btn btn-link">Add to calendar</button>
                             </form>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
 
 
         <div class="eventDetails outline3">
-            
-                <div class="container" id="eventDesc">
-                    <h5>Event Details</h5>
-                    <p class="eventDesc"><%= eventDetails[0].description %>
-                    </p>
-                </div>
-                <div class="container" id="butWhy">
-                    <h5>What is this all about?</h5>
-                    <p>
-                        Now you're probably wondering, why is this so fucking extra? A website? Buttons you can click? A calendar file (oh yes.)?  
-                    </p>
-                    <p>
-                        Well, for a bunch of reason, I'll try to keep it short.
-                    </p>
-                    <ol>
-                        <li>I'm realising that lots of people I only see around once a year now (basically just at birthdays), so I'm experimenting with a regular consistent session to bring people together. </li>
-                        <li>Meeting new people is the best, and one of the best ways to meet people that you actually like is to meet your friends' friends. So this is my gift to you. Come meet some cool people.</li>
-                        <li>I often meet new people, but it's kinda awkward to ask for a friend date from someone you've just sort of met. I want to be able to say "I do this monthly thing, it's fun, you should come". Much smoother. </li>
-                        <li>Heyra (the startup I've been working on for way too long) is not working, and I'm stepping away. Though I'm still interested in the friend-making space (it sounds super lame I know), and I'm using this as a way to try some different things and learn more. {If you're on a computer.. scroll down 😉}</li>
-                        <li>I'm exploring this format as a startup idea (event pages, easy email send outs and reminders blah blah), though it'll more likely just become a portfolio piece. </li>
-                        <li>I'm learning to how to build full stack web apps, by coding it all from scratch. And Behold, my shitty creation with its unbelievably shit UI.</li>
-                    </ol>
 
-                    <h5>Why is the UI so shit?</h5>
-                    <p> I have no talent in UI design okay, I can't even use a template.... leave me alone.
+            <div class="container" id="eventDesc">
+                <h5>Event Details</h5>
+                <p class="eventDesc"><%= eventDetails[0].description %>
+                </p>
+            </div>
+            <div class="container" id="butWhy">
+                <h5>What is this all about?</h5>
+                <p>
+                    Now you're probably wondering, why is this so fucking extra? A website? Buttons you can click? A
+                    calendar file (oh yes.)?
+                </p>
+                <p>
+                    Well, for a bunch of reason, I'll try to keep it short.
+                </p>
+                <ol>
+                    <li>I'm realising that lots of people I only see around once a year now (basically just at
+                        birthdays), so I'm experimenting with a regular consistent session to bring people together.
+                    </li>
+                    <li>Meeting new people is the best, and one of the best ways to meet people that you actually like
+                        is to meet your friends' friends. So this is my gift to you. Come meet some cool people.</li>
+                    <li>I often meet new people, but it's kinda awkward to ask for a friend date from someone you've
+                        just sort of met. I want to be able to say "I do this monthly thing, it's fun, you should come".
+                        Much smoother. </li>
+                    <li>Heyra (the startup I've been working on for way too long) is not working, and I'm stepping away.
+                        Though I'm still interested in the friend-making space (it sounds super lame I know), and I'm
+                        using this as a way to try some different things and learn more. {If you're on a computer..
+                        scroll down 😉}</li>
+                    <li>I'm exploring this format as a startup idea (event pages, easy email send outs and reminders
+                        blah blah), though it'll more likely just become a portfolio piece. </li>
+                    <li>I'm learning to how to build full stack web apps, by coding it all from scratch. And Behold, my
+                        shitty creation with its unbelievably shit UI.</li>
+                </ol>
 
-                    </p>
-                </div>
-            
+                <h5>Why is the UI so shit?</h5>
+                <p> I have no talent in UI design okay, I can't even use a template.... leave me alone.
+
+                </p>
+            </div>
+
         </div>
 
 
@@ -169,5 +164,6 @@
         <button onclick="hideShow()" class="miniFooterBtn btn btn-link" id="eventDescBtn">but why bro?</button>
         <button onclick="hideShow()" class="miniFooterBtn btn btn-link" id="butWhyBtn">back to event details</button>
     </div>
+
 
     </body>

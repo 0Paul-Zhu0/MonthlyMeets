@@ -5,6 +5,11 @@ body {background-color: #f1e25e;}
 
 .navbar {background-color:#f1e25e  !important;}
 
+.homeIcon{
+    position: relative;
+    left:10px;
+}
+
 /*
 .outline {
     border: 1px black solid;
