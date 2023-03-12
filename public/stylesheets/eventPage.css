@@ -68,7 +68,7 @@ body {
 }
 .attendingNum{
     font-size: larger;
-    color: green;
+    color: rgb(255, 149, 1);
     font-weight: bold;
 }
 .attendingtext{
