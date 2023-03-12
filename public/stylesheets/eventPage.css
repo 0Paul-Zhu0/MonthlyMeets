@@ -97,6 +97,9 @@ body {
     float: right;
 }
 
+.miniFooter{
+    display: none;
+}
 #butWhy{
     display: none;
     overflow-y: scroll;
