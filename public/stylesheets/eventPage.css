@@ -1,41 +1,26 @@
 
 body {
-    animation: scroll 140s linear infinite;
-    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
-    color: #eee;
-    height: 100vh;
-    min-width: 360px;
+    /*animation: scroll 140s linear infinite;*/
+    background: url("https://assets.mubicdn.net/images/film/210029/image-w1280.jpg?1581277288"), #111111;
+    color: yellow;
     width: 100%;
-    perspective: 1000px;
-    perspective-origin: 50% 50%;
+    background-size: 100% auto;
+   
     
 }
-
+/*
 @keyframes scroll {
    100%{
     background-position:0px -3000px;
   }
 }
-
+*/
 @media (prefers-reduced-motion) {
   body {
     animation: scroll 200s linear infinite;
   }
 }
 
-
-
-
-
-/*
-.outline3 {
-    border: 1px solid blue;
-}
-
-.outline2 {
-    border: 2px dotted orange;
-}
-*/
 
 .eventMainContainer {
     display: grid;
@@ -90,8 +75,14 @@ body {
  
 .eventDesc{
     white-space: pre-wrap;
+   
 }
 
+#eventDesc{
+    background-color:  rgba(130, 130, 130, 0.5);
+    border-radius: 10px;
+    
+}
 
 .miniFooterBtn{
     float: right;
@@ -110,6 +101,11 @@ body {
     display: none;
 }
 
+
+.eventDTL{
+    background-color:  rgba(130, 130, 130, 0.5);
+    border-radius: 10px;
+}
 
 @media (min-width: 769px) {
     .eventMainContainer {
@@ -167,6 +163,7 @@ body {
     .eventDTL {
         order: 1;
         margin-top: 10px;
+
     }
 
     .eventDetails {

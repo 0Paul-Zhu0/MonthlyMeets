@@ -1,9 +1,9 @@
 @import "landingPage.css";
 @import "eventPage.css";
 
-body {background-color: #f1e25e;}
+body {background-color: white;}
 
-.navbar {background-color:#f1e25e  !important;}
+.navbar {background-color:white  !important;}
 
 .homeIcon{
     position: relative;
