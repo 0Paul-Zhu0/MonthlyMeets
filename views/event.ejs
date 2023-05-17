@@ -1,12 +1,30 @@
 <%- include('layout.ejs'); %>
 
+<style>
+    .body_event{
+        background-color:  <%= eventDetails[0].backgroundColour %>;
+    }
+</style>
+
+</head>
+<body class="body_event"><!-- Just an image -->
+
+
+    <div class="homeIcon">
+      <a class="navbar-brand" href="/">
+        <img src="/static/assets/home-white.png" width="30" height="30" alt="">
+      </a>
+    </div>
+    
+
+
     <div class="container outline mainHeader">
         <div class="container outline">
             <h1>
                 <%= eventDetails[0].title %>
             </h1>
-            <p>We're doing a house party, and you're invited. Lucky you.</p>
-            <h5>Hosted by Jess, Karina, Charlie & Paul</h5>
+            <p>I'm doing a monthly get together, and you're invited to this one. Lucky you.</p>
+            <h5>Hosted by Paul</h5>
         </div>
     </div>
 

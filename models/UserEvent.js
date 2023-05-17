@@ -38,7 +38,12 @@ const UserEventSchema = new mongoose.Schema({
     eventLive:{
         type: Boolean,
         required: true,
+    },
+    backgroundColour:{
+        type: String,
+        required: true,
     }
+
 });
 
 const UserEvent = mongoose.model("UserEvent", UserEventSchema);

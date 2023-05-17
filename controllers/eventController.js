@@ -20,6 +20,7 @@ const loadEvent = async (req, res) => {
 }
 
 
+
 //New attendance
 const newAttendance = (req, res) => {
   const { eventId, name, status } = req.body;

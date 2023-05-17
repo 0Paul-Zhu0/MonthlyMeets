@@ -1,5 +1,25 @@
 
+.body_landing {
+    animation: scroll 140s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
+    color: white;
+    width: 100%;
+    background-size: 100% auto;
+   
+    
+}
 
+@keyframes scroll {
+   100%{
+    background-position:0px -3000px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .body_landing {
+    animation: scroll 200s linear infinite;
+  }
+}
 
 
 .landingEvents{
