@@ -2,7 +2,7 @@
 
 <style>
     .body_event{
-        background-color:  <%= eventDetails[0].backgroundColour %>;
+        background-color: <%= eventDetails[0].backgroundColour %>;
     }
 </style>
 
@@ -16,7 +16,7 @@
       </a>
     </div>
     
-
+    <%= eventDetails[0].backgroundColour %>
 
     <div class="container outline mainHeader">
         <div class="container outline">
@@ -137,6 +137,7 @@
                 <h5>Event Details</h5>
                 <p class="eventDesc"><%= eventDetails[0].description %>
                 </p>
+                
             </div>
             <div class="container" id="butWhy">
                 <h5>What is this all about?</h5>
